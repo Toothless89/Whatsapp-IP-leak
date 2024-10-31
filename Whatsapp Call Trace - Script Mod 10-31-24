@@ -4,7 +4,7 @@ tshark -i eth0 -T fields -f "udp" -e ip.dst -Y "ip.dst!=192.168.0.0/16 and ip.ds
 
 echo "Press Enter and call your target."
 
-read line -r
+read line
 
 while read -r line; do 
         whois "$line" > /tmp/b
